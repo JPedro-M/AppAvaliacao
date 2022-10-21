@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaPrincipal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:paddingVertical="20dp"
+            android:paddingStart="50dp"
+            android:text="Recebimento"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTitulo"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:labelFor="@id/etNome"
+            android:text="Nome:"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtNome"
+            android:layout_marginHorizontal="20dp"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/txtSexo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etNome"
+            android:layout_marginStart="20dp"
+            android:labelFor="@id/etFilhos"
+            android:text="Sexo:"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rgSexo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/txtSexo"
+            android:layout_marginHorizontal="20dp">
+
+            <RadioButton
+                android:id="@+id/rbSexo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Masculino"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/rbSexo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feminino"
+                android:textSize="20sp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txtFilhos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rgSexo"
+            android:layout_marginStart="20dp"
+            android:labelFor="@id/etFilhos"
+            android:text="Quantidade de filhos:"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etFilhos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtFilhos"
+            android:layout_marginHorizontal="20dp"
+            android:inputType="number"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/txtInBruto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etFilhos"
+            android:layout_marginStart="20dp"
+            android:labelFor="@id/etBruto"
+            android:text="Salário bruto:"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etBruto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtInBruto"
+            android:layout_marginHorizontal="20dp"
+            android:inputType="numberDecimal" />
+
+        <ImageView
+            android:id="@+id/imgFamilia"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/etBruto"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/homem" />
+
+        <Button
+            android:id="@+id/btCalcular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgFamilia"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="@color/black"
+            android:text="Calcular"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_popup"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Resultado"
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:paddingStart="20dp"
+
+            <TextView
+                android:id="@+id/txtBruto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Desconto INSS"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/txtIR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Desconto INSS"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/txtVT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Desconto INSS"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/txtFamilia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Desconto INSS"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/txtInss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Desconto INSS"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/txtLiquido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Desconto INSS"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:id="@+id/btFechar"
+                    android:backgroundTint="@color/black"
+                    android:layout_height="wrap_content"
+                    android:text="Fechar" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
